@@ -232,10 +232,10 @@ const data = {
         { img: "assets/festival2.jpg", title: "Diwali Celebrations", key: "home", parent: "home" },
     ],
     religiousplaces: [
-        { img: "assets/churches.jpg", title: "Churches", key: "churches", parent: "home" },
-        { img: "assets/temples1.jpg", title: "Temples", key: "temples", parent: "home" },
-        { img: "assets/mosque.jpg", title: "Mosques", key: "mosque", parent: "home" },
-        { img: "assets/derasar.jpg", title: "Jain Temples", key: "derasar", parent: "home" },
+        { img: "assets/Churches.jpg", title: "Churches", key: "churches", parent: "home" },
+        { img: "assets/Temples1.jpg", title: "Temples", key: "temples", parent: "home" },
+        { img: "assets/Mosque.jpg", title: "Mosques", key: "mosque", parent: "home" },
+        { img: "assets/Derasar.jpg", title: "Jain Temples", key: "derasar", parent: "home" },
     ],
     churches: [
         { img: "assets/church1.jpg", title: "St. Peter's Church", key: "religiousplaces", parent: "religiousplaces" },
