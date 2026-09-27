@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+/*42*/
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.menu {
+    list-style: none;
+    display: table-cell;
+    justify-content: flex-start;
+}
+
+.nav-item {
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    margin-top: 0px;
+}
+
+.nav-item:hover {
+    transform: translateX(15px);
+    /* Moves the item 15px to the right */
+    /*color: #ffcc00;
+     Optional: Changes text color on hover */
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-item:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    color: white;
+    padding: 3px 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.submenu li:hover {
+    transform: translateX(10px);
+    /* Moves the item 10px to the right */
+    /*color: #ffcc00;
+     Optional: Change text color on hover */
+}
+
+.dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out, visibility 0.1s;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #46c4eb;
+    font-weight: bold;
+    color: #f013d6 !important;
+}
+
+/* Show dropdown smoothly */
+.nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.heading {
+    font-size: 35px;
+    font-family: "Bree Serif";
+    text-align: center;
+    padding-top: 13vh;
+    margin-bottom: 0px;
+}
+
+.description {
+    font-size: 21px;
+    font-family: "Bree Serif";
+    padding: 10px;
+    margin-left: 75vh;
+    margin-bottom: 0px;
+}
+
+.btn {
+    margin-top: 90vh;
+}
+
+.bg {
+    background-image: linear-gradient(to top, violet, #B5B0F6, #FAECB7, lightpink);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    /*color: #ffcc00;*/
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: bold;
+    margin-left: 3px;
+    font-size: 14px;
+}
+
+.nav-link:hover {
+    color: #f013d6 !important;
+}
+
+.card {
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+    background: white;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    border-radius: 10px 10px 0 0;
+}
+
+.card-title {
+    font-weight: bold;
+    color: #343a40;
+}
+
+.btn-primary {
+    background-color: #ffcc00;
+    border: none;
+    color: #343a40;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #e6b800;
+}
+
+.image {
+    height: 50px;
+    width: 70px;
+    border-radius: 50px;
+}
+
+.icon-card {
+    height: 300px;
+    width: 250px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    text-align: left;
+    margin: 15px;
+}
+
+.menu-card-title {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 12px;
+    text-align: left;
+    margin-left: 13px;
+}
+
+.menu-item-link {
+    color: #d0b200;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 13px;
+}
+
+.footer {
+    font-family: "Lobster";
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+    font-size: 18px;
+}
+
+.w-100 {
+    height: 230px;
+}
