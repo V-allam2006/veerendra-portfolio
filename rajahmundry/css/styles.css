@@ -1,18 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
 
-/*42*/
-*{
+/* =========================
+   GLOBAL
+========================= */
+
+* {
     box-sizing: border-box;
 }
 
-body{
-    margin: 0;
+html {
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================
+   MENU
+========================= */
 
 .menu {
     list-style: none;
-    display: table-cell;
+    display: flex;
+    align-items: center;
     justify-content: flex-start;
+    gap: 10px;
 }
 
 .nav-item {
@@ -20,15 +57,13 @@ body{
     font-weight: bold;
     cursor: pointer;
     font-size: 16px;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-    margin-top: 0px;
+    transition: transform 0.3s ease-in-out,
+                color 0.3s ease-in-out;
+    margin-top: 0;
 }
 
 .nav-item:hover {
-    transform: translateX(15px);
-    /* Moves the item 15px to the right */
-    /*color: #ffcc00;
-     Optional: Changes text color on hover */
+    transform: translateX(8px);
 }
 
 .submenu {
@@ -38,6 +73,9 @@ body{
     left: 0;
     list-style: none;
     margin: 0;
+    padding: 0;
+    min-width: 150px;
+    z-index: 1000;
 }
 
 .nav-item:hover .submenu {
@@ -46,23 +84,23 @@ body{
 
 .submenu li {
     color: white;
-    padding: 3px 10px;
+    padding: 5px 10px;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out,
+                color 0.2s ease-in-out;
 }
 
 .submenu li:hover {
-    transform: translateX(10px);
-    /* Moves the item 10px to the right */
-    /*color: #ffcc00;
-     Optional: Change text color on hover */
+    transform: translateX(8px);
 }
 
 .dropdown-menu {
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
-    transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out, visibility 0.1s;
+    transition: opacity 0.2s ease-in-out,
+                transform 0.2s ease-in-out,
+                visibility 0.2s;
 }
 
 .dropdown-menu .dropdown-item:hover {
@@ -71,56 +109,83 @@ body{
     color: #f013d6 !important;
 }
 
-/* Show dropdown smoothly */
 .nav-item.dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
+
+/* =========================
+   HEADING
+========================= */
+
 .heading {
-    font-size: 35px;
-    font-family: "Bree Serif";
+    font-size: clamp(28px, 4vw, 35px);
+    font-family: "Bree Serif", serif;
     text-align: center;
-    padding-top: 13vh;
-    margin-bottom: 0px;
+    padding: 13vh 20px 0;
+    margin: 0;
+    line-height: 1.2;
 }
+
+
+/* =========================
+   DESCRIPTION
+========================= */
 
 .description {
-    font-size: 21px;
-    font-family: "Bree Serif";
-    padding: 10px;
-    margin-left: 0;
-    margin-bottom: 0px;
+    font-size: clamp(18px, 2.5vw, 21px);
+    font-family: "Bree Serif", serif;
+    padding: 10px 20px;
+    margin: 0 auto;
+    max-width: 700px;
     text-align: center;
+    line-height: 1.5;
 }
+
+
+/* =========================
+   BUTTON
+========================= */
 
 .btn {
-    margin-top: 90vh;
+    margin-top: 40px;
 }
 
+
+/* =========================
+   BACKGROUND
+========================= */
+
 .bg {
-    background-image: linear-gradient(to top, violet, #B5B0F6, #FAECB7, lightpink);
+    background-image: linear-gradient(
+        to top,
+        violet,
+        #B5B0F6,
+        #FAECB7,
+        lightpink
+    );
+
     background-size: cover;
-    height: 100%;
+    background-position: center;
+    min-height: 100vh;
     width: 100%;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-}
+
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar {
     background-color: #343a40;
+    width: 100%;
 }
 
 .navbar-brand {
-    font-size: 1.8rem;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
     font-weight: bold;
-    /*color: #ffcc00;*/
 }
 
 .nav-link {
@@ -134,18 +199,28 @@ body {
     color: #f013d6 !important;
 }
 
+
+/* =========================
+   CARDS
+========================= */
+
 .card {
+    width: 100%;
+    max-width: 100%;
     border-radius: 10px;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+    transition: transform 0.2s ease-in-out,
+                box-shadow 0.2s;
     background: white;
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
+    width: 100%;
+    height: auto;
     border-radius: 10px 10px 0 0;
 }
 
@@ -153,6 +228,11 @@ body {
     font-weight: bold;
     color: #343a40;
 }
+
+
+/* =========================
+   BUTTON PRIMARY
+========================= */
 
 .btn-primary {
     background-color: #ffcc00;
@@ -165,24 +245,41 @@ body {
     background-color: #e6b800;
 }
 
+
+/* =========================
+   IMAGE
+========================= */
+
 .image {
     height: 50px;
     width: 70px;
-    border-radius: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
+
+/* =========================
+   ICON CARDS
+========================= */
+
 .icon-card {
-    height: 300px;
     width: 250px;
+    max-width: 100%;
+    min-height: 300px;
     border-radius: 20px;
     background-color: #ffffff;
     text-align: left;
-    margin: 15px;
+    margin: 15px auto;
 }
+
+
+/* =========================
+   MENU CARD
+========================= */
 
 .menu-card-title {
     color: #323f4b;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-size: 18px;
     font-weight: 500;
     margin-top: 12px;
@@ -192,33 +289,159 @@ body {
 
 .menu-item-link {
     color: #d0b200;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
     font-weight: 500;
     margin-left: 13px;
 }
 
+
+/* =========================
+   FOOTER
+========================= */
+
 .footer {
-    font-family: "Lobster";
+    font-family: "Lobster", cursive;
     text-align: center;
     background-color: #007bff;
     color: white;
-    padding: 10px;
+    padding: 10px 15px;
     width: 100%;
-    bottom: 0;
     font-size: 18px;
 }
 
+
+/* =========================
+   RESPONSIVE - TABLETS
+========================= */
+
+@media (max-width: 992px) {
+
+    .heading {
+        padding-top: 10vh;
+    }
+
+    .description {
+        max-width: 650px;
+    }
+
+    .icon-card {
+        width: 230px;
+        min-height: 280px;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE - MOBILE
+========================= */
+
 @media (max-width: 768px) {
+
     .heading {
         font-size: 28px;
-        padding-top: 8vh;
+        padding: 8vh 15px 0;
+        line-height: 1.25;
     }
 
     .description {
         font-size: 18px;
-        margin-left: 0;
         padding: 10px 20px;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 500px;
         text-align: center;
+        line-height: 1.5;
+    }
+
+    .btn {
+        margin-top: 30px;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .nav-link {
+        font-size: 14px;
+        margin-left: 0;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .icon-card {
+        width: calc(100% - 30px);
+        max-width: 350px;
+        min-height: 280px;
+        margin: 15px auto;
+    }
+
+    .footer {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .heading {
+        font-size: 25px;
+        padding: 7vh 15px 0;
+    }
+
+    .description {
+        font-size: 17px;
+        padding: 10px 15px;
+    }
+
+    .btn {
+        margin-top: 25px;
+    }
+
+    .navbar-brand {
+        font-size: 1.35rem;
+    }
+
+    .icon-card {
+        width: calc(100% - 20px);
+        min-height: 250px;
+    }
+
+    .footer {
+        font-size: 15px;
+        padding: 10px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 360px) {
+
+    .heading {
+        font-size: 23px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .description {
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .icon-card {
+        width: calc(100% - 16px);
     }
 }
