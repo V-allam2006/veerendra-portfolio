@@ -212,7 +212,7 @@ body {
     height: 230px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 4448px) {
     .description {
         font-size: 18px;
         margin-left: 0;
