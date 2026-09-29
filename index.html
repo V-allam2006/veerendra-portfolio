@@ -208,11 +208,16 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
 
 <nav>
   <div class="wrap">
-    <div class="brand">AHV<em>K</em></div>
+    <div class="brand">AHVK</div>
     <div class="navlinks" id="navlinks">
       <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
     </div>
-    <button class="navtoggle" id="navtoggle" aria-label="Menu">☰</button>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle light/dark theme">
+        <svg id="themeIcon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"></line><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"></line><line x1="2" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22" y2="12"></line><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"></line><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"></line></svg>
+      </button>
+      <button class="navtoggle" id="navtoggle" aria-label="Menu">☰</button>
+    </div>
   </div>
 </nav>
 
