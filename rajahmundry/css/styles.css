@@ -212,7 +212,7 @@ body {
     height: 230px;
 }
 
-@media (max-width: 4448px) {
+@media (max-width: 480px) {
     .description {
         margin-left: 25vh;
     }
