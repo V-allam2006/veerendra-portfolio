@@ -258,7 +258,7 @@
                         <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png" class="thanking-customers-section-img" />
                     </div>
                     <div>
-                        <button class="custom-button">Redeem Gift</button>
+                        <button class="custom-button" data-toggle="modal" data-target="#giftModal">Redeem Gift</button>
                     </div>
                 </div>
                 <div class="col-12 col-md-5 d-none d-md-block">
@@ -302,7 +302,45 @@
             </div>
         </div>
     </div>
-   
+ <div class="modal fade" id="giftModal" tabindex="-1" role="dialog"
+    aria-labelledby="giftModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="giftModalLabel">
+                    🎁 Surprise Gift
+                </h5>
+
+                <button type="button" class="close"
+                    data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body text-center">
+                <h4>Congratulations!</h4>
+                <p>
+                    You have unlocked a special gift from FoodMunch.
+                </p>
+                <p>
+                    Enjoy <strong>20% OFF</strong> on your next order!
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>  
 </body>
 
 </html>
