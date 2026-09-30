@@ -8,13 +8,14 @@ function createAndAppendSearchResult(result) {
         link,
         description
     } = result;
-    //1. Div Container -- result-item
+
+    // 1. Div Container -- result-item
     let resultItemEl = document.createElement("div");
     resultItemEl.classList.add("result-item");
 
     searchResultsEl.appendChild(resultItemEl);
 
-    //2. Anchor Title -- result-title
+    // 2. Anchor Title -- result-title
     let resultTitleEl = document.createElement("a");
     resultTitleEl.classList.add("result-title");
     resultTitleEl.textContent = title;
@@ -23,12 +24,11 @@ function createAndAppendSearchResult(result) {
 
     resultItemEl.appendChild(resultTitleEl);
 
-
-    //3. Title Break 
+    // 3. Title Break
     let titleBreakEl = document.createElement("br");
     resultItemEl.appendChild(titleBreakEl);
 
-    //4. Anchor URL -- result-url
+    // 4. Anchor URL -- result-url
     let urlEl = document.createElement("a");
     urlEl.classList.add("result-url");
     urlEl.href = link;
@@ -37,14 +37,13 @@ function createAndAppendSearchResult(result) {
 
     resultItemEl.appendChild(urlEl);
 
-    //5. Line Break 
+    // 5. Line Break
     let lineBreakEl = document.createElement("br");
-
     resultItemEl.appendChild(lineBreakEl);
 
-    //6. Paragraph -- line-description
+    // 6. Paragraph -- link-description
     let descriptionEl = document.createElement("p");
-    descriptionEl.classList.add("line-description");
+    descriptionEl.classList.add("link-description");
     descriptionEl.textContent = description;
 
     resultItemEl.appendChild(descriptionEl);
@@ -52,6 +51,7 @@ function createAndAppendSearchResult(result) {
 
 function displayResults(searchResults) {
     spinnerEl.classList.toggle("d-none");
+
     for (let result of searchResults) {
         createAndAppendSearchResult(result);
     }
@@ -61,11 +61,15 @@ function searchWikipedia(event) {
     if (event.key === "Enter") {
         searchResultsEl.textContent = "";
         spinnerEl.classList.toggle("d-none");
+
         let searchInputValue = searchInputEl.value;
+
         let url = "https://apis.ccbp.in/wiki-search?search=" + searchInputValue;
+
         let options = {
-            mehod: "GET"
+            method: "GET"
         };
+
         fetch(url, options)
             .then(function(response) {
                 return response.json();
@@ -74,10 +78,10 @@ function searchWikipedia(event) {
                 let {
                     search_results
                 } = jsonData;
+
                 displayResults(search_results);
             });
     }
 }
-
 
 searchInputEl.addEventListener("keydown", searchWikipedia);
