@@ -76,6 +76,22 @@
     justify-content: center;
 }
 
+.custom-button,
+.custom-button:hover,
+.custom-button:focus,
+.custom-button:active {
+    color: white;
+    text-decoration: none;
+}
+
+.custom-outline-button,
+.custom-outline-button:hover,
+.custom-outline-button:focus,
+.custom-outline-button:active {
+    color: #d0b200;
+    text-decoration: none;
+}
+
 .wcu-section {
     background-color: #f9fbfe;
 }
