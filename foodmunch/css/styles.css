@@ -360,38 +360,7 @@
         margin-right: 8px;
     }
 
-    /* Keep the original 80px icons on desktop; smaller only on mobile */
-    .follow-us-icon-container {
-        width: 52px;
-        height: 52px;
-        border-radius: 50%;
-        margin: 8px;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .icon {
-        font-size: 25px;
-    }
-
-    .footer-section-mail-id {
-        font-size: 14px;
-        overflow-wrap: anywhere;
-    }
-
-    .footer-section-address {
-        font-size: 13px;
-        line-height: 1.6;
-    }
-
-    .modal-dialog {
-        max-width: calc(100% - 24px);
-        margin: 12px auto;
-    }
-}
-
+   
 /* Very narrow phones */
 @media (max-width: 360px) {
     .banner-heading {
