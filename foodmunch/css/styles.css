@@ -292,3 +292,113 @@
     font-family: "Roboto";
     font-size: 14px;
 }
+
+    .wcu-card-description,
+    .healthy-food-section-description,
+    .delivery-and-payment-section-description,
+    .thanking-customers-section-description {
+        font-size: 15px;
+    }
+
+    .wcu-card {
+        padding: 18px !important;
+        margin-bottom: 16px;
+    }
+
+    .wcu-card-title {
+        font-size: 20px;
+    }
+
+    .menu-item-card {
+        padding: 12px !important;
+        margin-bottom: 16px;
+    }
+
+    .menu-item-image {
+        border-radius: 12px;
+    }
+
+    .menu-card-title {
+        font-size: 17px;
+        margin-top: 15px;
+    }
+
+    .healthy-food-section-img,
+    .delivery-and-payment-section-img,
+    .thanking-customers-section-img {
+        width: 100%;
+        max-width: 260px;
+        margin-bottom: 22px;
+    }
+
+    .payment-card-img {
+        width: 42px;
+        max-width: 42px;
+        margin-right: 8px;
+    }
+
+    .follow-us-icon-container {
+        width: 52px;
+        height: 52px;
+        margin: 8px;
+        border-radius: 50%;
+    }
+
+    .icon {
+        font-size: 25px;
+    }
+
+    .footer-section {
+        padding: 35px 12px;
+    }
+
+    .footer-section-mail-id {
+        font-size: 14px;
+    }
+
+    .footer-section-address {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .modal-dialog {
+        margin: 12px;
+    }
+}
+
+/* Very narrow phones */
+@media (max-width: 360px) {
+    .banner-heading {
+        font-size: 27px;
+    }
+
+    .custom-button,
+    .custom-outline-button {
+        width: 118px;
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .follow-us-icon-container {
+        width: 44px;
+        height: 44px;
+        margin: 6px;
+    }
+
+    .icon {
+        font-size: 22px;
+    }
+}
+
+/* Respect device accessibility settings */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
